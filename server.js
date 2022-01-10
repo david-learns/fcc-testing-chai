@@ -85,16 +85,16 @@ app.get('/_api/get-tests', cors(), function (req, res, next) {
 
 app.listen(PORT, function () {
   console.log("Listening on port " + PORT);
-  // console.log('Running Tests...');
-  // setTimeout(function () {
-  //   try {
-  //     runner.run();
-  //   } catch (e) {
-  //     error = e;
-  //     console.log('Tests are not valid:');
-  //     console.log(error);
-  //   }
-  // }, 1500);
+  console.log('Running Tests...');
+  setTimeout(function () {
+    try {
+      runner.run();
+    } catch (e) {
+      error = e;
+      console.log('Tests are not valid:');
+      console.log(error);
+    }
+  }, 1500);
 });
 
 
