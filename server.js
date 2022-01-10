@@ -1,4 +1,5 @@
 'use strict'
+const PORT = process.env.PORT || 3000;
 const express = require('express');
 const app = express();
 
@@ -82,8 +83,8 @@ app.get('/_api/get-tests', cors(), function (req, res, next) {
   });
 
 
-app.listen(3000, function () {
-  console.log("Listening on port " + process.env.PORT);
+app.listen(PORT, function () {
+  console.log("Listening on port " + PORT);
   // console.log('Running Tests...');
   // setTimeout(function () {
   //   try {
